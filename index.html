@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photocard Shop</title>
+    <link rel="stylesheet" href="E-Commerce.css">
+</head>
+<body>
+    <header>
+        <h1>Durwin's Photocard Shop</h1>
+        <nav>
+            <button class="nav-btn" onclick="showHome()">Home</button>
+            <button class="nav-btn" onclick="showShop()">Shop</button>
+            <button class="nav-btn" onclick="showBasket()">Basket</button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Home content -->
+        <div id="home" class="content" style="display: none;">
+            <h2>Welcome to Durwin's Photocard Shop!</h2>
+            <p>Discover your idol's Photocards!</p>
+            <!-- Ads section -->
+            <h2>Hot Picks!</h2>
+            <div class="ads-container">
+                <img src="https://i.pinimg.com/736x/16/81/f4/1681f4691707948485b6cb5aea870646.jpg" alt="Ad 1"onclick="redirectToShop()">
+                <img src="https://i.pinimg.com/736x/90/2a/55/902a55b45108c3c77accf72c42eec16d.jpg" alt="Ad 2"onclick="redirectToShop()">
+                <img src="https://i.pinimg.com/564x/f3/1d/0a/f31d0a89ee8e50022b4964249d68e9d9.jpg" alt="Ad 3"onclick="redirectToShop()">
+            </div>
+        </div>
+
+        <!-- Shop content -->
+        <div id="shop" class="content" style="display: none;">
+            <h2>Shop Items</h2>
+            <div class="product-container">
+                <!-- Products will be added dynamically using JavaScript -->
+            </div>
+        </div>
+
+        <!-- Basket -->
+        <div id="basket" class="content" style="display: none;">
+            <h2>Basket</h2>
+            <ul id="basket-items"></ul>
+            <button class="btn" onclick="clearBasket()">Clear Basket</button>
+            <button id="checkoutBtn" onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <script src="E-Commerce.js"></script>
+</body>
+</html>
